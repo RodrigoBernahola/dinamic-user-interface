@@ -12,3 +12,15 @@ if (app) {
   });
   app.appendChild(button);
 }
+
+const dropdownButton = document.querySelector('.dropdownButton');
+const unorderedList = document.querySelector('ul.list');
+
+dropdownButton.addEventListener('click', () => {
+  const res = unorderedList.getAttribute('hidden');
+  if (res) {
+    unorderedList.removeAttribute('hidden');
+  } else {
+    unorderedList.setAttribute('hidden', 'on');
+  }
+});
