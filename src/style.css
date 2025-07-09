@@ -1,8 +1,12 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
+  background-color: #e0a9a9;
   margin: 0;
   padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 #app {
@@ -27,6 +31,8 @@ button {
   border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
+  width: 150px;
+  font-weight: bold;
 }
 
 button:hover {
@@ -35,4 +41,88 @@ button:hover {
 
 .dropdownContainer li {
   padding: 10px;
+  list-style-type: none;
+}
+
+ul {
+
+  background-color: #333;
+  width: 200px;
+
+}
+
+button.dropdownButton {
+  width: 240px;
+}
+
+/* SECCION DEL CARRUSEL */
+
+.bigContainer {
+  background-color: #5392d6;
+  height: 700px;
+  width: 1200px;
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: 1fr 10fr 1fr;
+}
+
+
+.imageContainer {
+  width: 900px;
+  height: auto;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.arrow.left {
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.arrow.right {
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.points {
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 2;
+  grid-column-end: 3;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow button {
+  height: 50px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button img {
+  width: 30px;
+  height: 30px;
+}
+
+.points button {
+  border-radius: 0;
+  color: black;
+  margin: 2px;
+}
+
+.active {
+  background-color: #2c4866;
+  color: wheat;
 }
